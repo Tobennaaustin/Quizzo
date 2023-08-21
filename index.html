@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="start-screen">
+            <h1 class="heading">Quizzo</h1>
+            <div class="subjectselect">
+                <label for="subject">Select a subject:</label>
+                <select id="subject" class="subjectselect">              
+                    <!-- Add more subjects here -->
+                </select>
+                <button id="startBtn" class="btn">Start Quiz</button>
+            </div>
+
+            <div class="question-wrapper">
+                <div class="quiz-card">
+                    <h2 class="heading">Questions</h2>
+                    <div class="question" id="question"></div>
+                    <input type="text" class="answer" id="answer" placeholder="Your answer">
+                    
+                </div>
+                <button id="submitBtn" class="btn next">Submit</button>
+                <div class="answer2" id="resultCard">
+
+                    <h2>Quiz Results</h2>
+                    <div id="correct-answers"></div>
+                    <div id="wrong-answers"></div>
+                  </div>
+                <div class="number hide">
+                    Question <span class="current">1</span><span class="total">/10</span>
+                </div>
+                <div class="question hide">This is a question</div>
+                <div class="answer-wrapper hide">
+                    <div class="answer selected wrong">
+                        <span class="text">answer</span>
+                        <span class="checkbox">
+                            <span class="icon">*</span>
+                        </span>
+                    </div>
+                    <div class="answer correct">
+                        <span class="text">answer</span>
+                        <span class="checkbox">
+                            <span class="icon">*</span>
+                        </span>
+                    </div>
+                    <div class="answer">
+                        <span class="text">answer</span>
+                        <span class="checkbox">
+                            <span class="icon">*</span>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="overlay" id="overlay">
+                  <div class="popup">
+                    <span class="close-button" id="closeButton"><span class="clear">X</span></span>
+                    <h3>Quzzios' Rules</h3>
+                    <ol>
+                      <li>Fill the short form in-oder to proceede to the questions.</li>
+                      <li>The form would be disabled after starting the quiz.</li>
+                      <li>You must finish a quiz before you go to another one.</li>
+                      <li>Make sure you give your answers in full. Example if an answer is King solomon, don't write only solomon. </li>
+                      <li>The question answers are not case sensitive.</li>
+                      <li>The answers are not based on suggestions or your oppinion.</li>
+                    </ol>
+                  </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+  const overlay = document.getElementById('overlay');
+const closeButton = document.getElementById('closeButton');
+
+closeButton.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
